@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using System.Timers;
+using System.Drawing;
 
 namespace WindowsFormsApplication1
 {
@@ -22,16 +23,19 @@ namespace WindowsFormsApplication1
         private Tablero tablero;
         private Serpiente serpiente;
         private Comida comida;
-        private int _tamaño;
+        private int _tamaño=40;
         private int[] comidaCoor;
         private Boolean _hayFin;
+        private int _contadorComida=100;
+        private int _velocidad = 100;
+        private int _nivel = 0;
        
  
-        public Juego(int tamaño)
+        public Juego()
         {
             comidaCoor = new int[2];
-            _tamaño = tamaño;
-            tablero = new Tablero(_tamaño);
+       
+            tablero = new Tablero(_tamaño,1);
             serpiente = new Serpiente(tablero.Mapa, _tamaño);
             generarComida();
         }
@@ -53,7 +57,15 @@ namespace WindowsFormsApplication1
 
         //Metodo llamado en cada tick del timer, mueve la serpiente y comprueba si hay colisiones
         public void actualizar(object sender, EventArgs e)
-        {  
+        {
+
+            if (_contadorComida == 0)
+            {
+                generarComida();
+                _contadorComida = 10;
+            }
+            else
+                _contadorComida--;
             serpiente.Mover();
             colision();
         }
@@ -102,6 +114,23 @@ namespace WindowsFormsApplication1
                 }
  
         }
+
+        public Brush marcarComida() {
+
+            if (_contadorComida > 8)
+                return Brushes.Black;
+            else
+                return Brushes.Blue;
+               
+        }
+
+
+        private void cambiarNivel() {
+            _nivel++;
+            _velocidad =+ 10;
+        
+        }
+
         public Boolean Fin
         {
             get { return _hayFin; }
@@ -134,5 +163,23 @@ namespace WindowsFormsApplication1
             set { comida.Cantidad = value; }
         }
 
+        public int Tamaño
+        {
+            get { return _tamaño; }
+            set { _tamaño = value; }
+        }
+
+        public int Velocidad
+        {
+            get { return _velocidad; }
+            set { _velocidad = value; }
+        }
+
+
+        public int Nivel
+        {
+            get { return _nivel; }
+            set { _nivel = value; }
+        }
     }
 }

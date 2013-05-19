@@ -42,24 +42,18 @@ namespace WindowsFormsApplication1
                 
                 if (_x== sx && _y == sy)
                     estaEnSerpiente = true;
-                else
-                    estaEnSerpiente = false;
 
-                while (ent.MoveNext()  && !estaEnTablero) {
+                while (ent.MoveNext()  && !estaEnSerpiente) {
                     coordenadas = (int[])ent.Current;
                     if (coordenadas[0] == _x && coordenadas[1] == _y)
                         estaEnTablero = true;
-                    else
-                        estaEnTablero = false;
                 }
-               
-                while (ens.MoveNext() && !estaEnSerpiente)
+
+                while (ens.MoveNext() && !estaEnSerpiente && !estaEnTablero)
                 {
                     n = (Nodo)ens.Current;
                     if (n.X == _x && n.Y == _y)
                         estaEnSerpiente = true;
-                    else
-                        estaEnSerpiente = false;
                 }   
 
             } while (estaEnSerpiente || estaEnTablero);

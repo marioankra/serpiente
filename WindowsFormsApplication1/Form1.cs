@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
     {
         //Tamaño es el numero de nodos que entran  en el tablero y escala el numero de pixeles de cada uno
         //coordendadas es un array temporal
-        private int _tamaño = 20;
+       
         private int escala;
         private Juego partida ;
         private int _direccion;
@@ -32,8 +32,10 @@ namespace WindowsFormsApplication1
         
         {
             InitializeComponent();
+            partida = new Juego();
+            timer1.Interval = partida.Velocidad;
             timer1.Start();
-            partida = new Juego(_tamaño);
+           
         }
 
         // p pausa el juego y n crea una nueva partida, los movimientos se generan con las teclas de direccion
@@ -72,7 +74,8 @@ namespace WindowsFormsApplication1
             if (e.KeyData == Keys.N)
             {
                 timer1.Stop();
-                partida = new Juego(_tamaño);
+                partida = new Juego();
+                timer1.Interval = partida.Velocidad;
                timer1.Start();
             }
 
@@ -82,7 +85,7 @@ namespace WindowsFormsApplication1
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             _coordenadas=new int[2];
-            escala = pictureBox1.Width / _tamaño;
+            escala = pictureBox1.Width /partida.Tamaño;
             Graphics lienzo;
             lienzo = e.Graphics; 
             _coordenadas= partida.Comida;
@@ -108,7 +111,7 @@ namespace WindowsFormsApplication1
 
 
             _coordenadas = partida.Comida;
-            lienzo.FillRectangle(Brushes.Blue, _coordenadas[0] * escala, _coordenadas[1] * escala, escala, escala);
+            lienzo.FillRectangle(partida.marcarComida(), _coordenadas[0] * escala, _coordenadas[1] * escala, escala, escala);
             lienzo.DrawString(partida.cantidadComida.ToString(), new Font("Arial", 12), Brushes.Yellow, _coordenadas[0] * escala, _coordenadas[1] * escala);
 
 

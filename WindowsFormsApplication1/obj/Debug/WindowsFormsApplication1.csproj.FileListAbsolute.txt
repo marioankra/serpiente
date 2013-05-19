@@ -80,3 +80,15 @@ C:\Documents and Settings\bi0008\Escritorio\SerpienteColas\serpiente colas\Windo
 C:\Documents and Settings\bi0008\Escritorio\SerpienteColas\serpiente colas\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Documents and Settings\bi0008\Escritorio\SerpienteColas\serpiente colas\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GenerateResource.read.1.tlog
 C:\Documents and Settings\bi0008\Escritorio\SerpienteColas\serpiente colas\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Exal\Desktop\serpiente colas\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Exal\Desktop\serpiente colas\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Exal\Desktop\serpiente colas\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Exal\Documents\GitHub\serpiente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Exal\Documents\GitHub\serpiente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Exal\Documents\GitHub\serpiente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Exal\Documents\GitHub\serpiente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Exal\Documents\GitHub\serpiente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Exal\Documents\GitHub\serpiente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Exal\Documents\GitHub\serpiente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Exal\Documents\GitHub\serpiente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Exal\Documents\GitHub\serpiente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
